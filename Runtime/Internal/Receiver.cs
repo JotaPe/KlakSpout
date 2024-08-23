@@ -86,7 +86,7 @@ sealed class Receiver : System.IDisposable
         // correct one.
         if (_texture == null && data.texturePointer != IntPtr.Zero)
             _texture = Texture2D.CreateExternalTexture
-              ((int)data.width, (int)data.height, TextureFormat.RGBA32,
+              ((int)data.width, (int)data.height, TextureFormat.RGBAFloat,
                false, false, data.texturePointer);
 
         // Update event for the render thread
